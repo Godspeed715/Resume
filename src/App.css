@@ -14,7 +14,7 @@
 }
 
 .container > div {
-	padding: 30px 20px;
+	padding: 40px 30px;
 }
 .Experience {
 	grid-area: experience;
@@ -25,11 +25,21 @@
 .AboutMe {
 	grid-area: aboutMe;
 }
-.Header {
+.container .Header {
+	padding-top: 80px;
 	grid-area: header;
 }
 .ProfilePicture {
 	grid-area: profilePicture;
+	background: var(--color-accent-secondary);
+	display: flex;
+	place-content: center;
+}
+
+.ProfilePicture img {
+	border-radius: 50%;
+	height: 300px;
+	width: auto;
 }
 
 .Header,
