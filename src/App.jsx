@@ -10,6 +10,7 @@ function App() {
 	// const [count, setCount] = useState(0)
 	const pageAreas = [
 		Header(),
+		<div className="border"></div>,
 		ProfilePicture(),
 		AboutMe(),
 		Experience(),

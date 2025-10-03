@@ -1,3 +1,7 @@
+import Icon from '@mdi/react'
+import { mdiWhatsapp, mdiGithub, mdiGmail } from '@mdi/js'
+;<></>
+
 function DisplayDics({ template }) {
 	const listItems = template.map((element) => (
 		<ul>
@@ -63,19 +67,44 @@ function MoreData() {
 			</div>
 			<div>
 				<h1>Contact</h1>
-				<div className="contact-divs">
-					<div>img</div>
-					<div>Whatsapp</div>
-				</div>
-				<div className="contact-divs">
-					<div>img</div>
-					<div>Github</div>
-				</div>
+				<a
+					href="https://mail.google.com/mail/?view=cm&fs=1&to=chimzagamdaniel@gmail.com&su=Hello&body=This%20is%20a%20"
+					target="_blank"
+					style={{ textDecoration: 'none', color: 'inherit' }}
+				>
+					<div className="contact-divs">
+						<div>
+							<Icon path={mdiGmail} size={2} />
+						</div>
+						<div>Gmail</div>
+					</div>
+				</a>
 
-				<div className="contact-divs">
-					<div>img</div>
-					<div>Gmail</div>
-				</div>
+				<a
+					href="https://github.com/Godspeed715"
+					target="_blank"
+					style={{ textDecoration: 'none', color: 'inherit' }}
+				>
+					<div className="contact-divs">
+						<div>
+							<Icon path={mdiGithub} size={2} />
+						</div>
+						<div>Github</div>
+					</div>
+				</a>
+
+				<a
+					href="https://wa.me/2347059281620"
+					target="_blank"
+					style={{ textDecoration: 'none', color: 'inherit' }}
+				>
+					<div className="contact-divs">
+						<div>
+							<Icon path={mdiWhatsapp} size={2} />
+						</div>
+						<div>Whatsapp</div>
+					</div>
+				</a>
 			</div>
 		</div>
 	)

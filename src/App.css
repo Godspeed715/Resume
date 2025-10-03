@@ -4,29 +4,38 @@
 }
 
 .container {
+	font-weight: 500;
 	display: grid;
-	grid-template-columns: repeat(2, minmax(200px, 1fr));
-	grid-template-rows: repeat(2, minmax(200px, 1fr)) minmax(600px, 3fr);
+	grid-template-columns:
+		minmax(300px, 1.5fr)
+		5px
+		minmax(200px, 1fr);
 	grid-template-areas:
-		'header profilePicture'
-		'aboutMe profilePicture'
-		'experience moreDetails';
+		'header border profilePicture'
+		'aboutMe border profilePicture'
+		'experience border moreDetails';
 }
 
 .container > div {
 	padding: 40px 30px;
 }
-.Experience {
+.container .border {
+	background-color: var(--color-accent-secondary);
+	grid-area: border;
+	grid-row: 1/-1;
+	padding: 0;
+}
+.container .Experience {
 	grid-area: experience;
 }
-.MoreData {
+.container .MoreData {
 	grid-area: moreDetails;
 	display: grid;
 	grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 .MoreData > div > *:nth-child(1) {
-	text-align: center;
+	/* text-align: center; */
 	grid-column: 1 / span 2;
 }
 .MoreData > .skills > div > ul {
@@ -44,9 +53,10 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 50px;
+	font-size: large;
+	padding-right: 100px;
 }
-.AboutMe {
+.container .AboutMe {
 	grid-area: aboutMe;
 }
 .container .Header {
@@ -57,7 +67,8 @@
 	grid-area: profilePicture;
 	background: var(--color-accent-secondary);
 	display: flex;
-	place-content: center;
+	justify-content: center;
+	align-items: center;
 }
 
 .ProfilePicture img {
@@ -70,8 +81,9 @@
 .AboutMe {
 	border-bottom: 5px solid var(--color-accent-secondary);
 }
-.Header,
+/* .Header,
 .AboutMe,
 .Experience {
+	align-self: stretch;
 	border-right: 5px solid var(--color-accent-secondary);
-}
+} */
