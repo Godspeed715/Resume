@@ -1,12 +1,10 @@
+import luffy from '../assets/luffy.jpeg'
 function ProfilePicture() {
 	return (
 		<div className="ProfilePicture">
-			<img
-				src="src\assets\• Anime _ One Piece _ luffy icons.jpeg"
-				alt="Profile Picture"
-			/>
+			<img src={luffy} alt="Profile Picture" />
 		</div>
-	);
+	)
 }
 
-export default ProfilePicture;
+export default ProfilePicture
